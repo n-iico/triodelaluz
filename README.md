@@ -1,0 +1,80 @@
+# Trío de la Luz Productions — Sitio web
+
+Sitio web one-page estático (HTML + CSS + JS, sin dependencias ni build).
+
+## Archivos
+
+- `index.html` — estructura y contenido
+- `styles.css` — diseño (paleta, tipografía, animaciones)
+- `script.js` — menú móvil, nav al hacer scroll y animaciones de entrada
+- `favicon.svg` — emblema del Trío (favicon)
+
+## Identidad: el emblema del Trío de la Luz
+
+El símbolo —tres haces (rojo, azul, verde) que convergen en una luz blanca— está
+definido una sola vez como `<symbol id="emblem">` al inicio de `index.html` y se
+reutiliza con `<use href="#emblem">` en el nav, la franja de cita, el separador y el
+footer. En el hero hay una versión animada (convergencia + pulso) con clases propias.
+
+Para cambiar los colores del emblema, edita las variables en `:root` de `styles.css`:
+`--red` (tierra), `--blue` (cielo/noche), `--green` (naturaleza), `--light` (unión).
+
+## Ver en local
+
+Abre `index.html` directamente en el navegador, o levanta un servidor simple:
+
+```bash
+python3 -m http.server 8000
+# luego abre http://localhost:8000
+```
+
+## Reemplazar los fondos por fotos reales
+
+Ahora los fondos del hero y del proyecto son gradientes atmosféricos (placeholder).
+Cuando tengas las fotos, crea una carpeta `images/` y edita `styles.css`:
+
+```css
+/* Hero (portada) — Patagonia, cielo nocturno, rodaje... */
+.hero__bg {
+  background-image:
+    linear-gradient(160deg, rgba(11,14,18,.55), rgba(7,10,14,.75)),
+    url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Proyecto un documental en desarrollo — still del documental */
+.project__media--doc .project__media-bg {
+  background-image: url('images/documental-desarrollo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Green Ghost: La Serie Animada — arte / still de la serie */
+.project__media--ghost .project__media-bg {
+  background-image: url('images/green-ghost.jpg');
+  background-size: cover;
+  background-position: center;
+}
+```
+
+Recomendación: fotos en horizontal, mínimo 2000px de ancho, comprimidas (JPG ~70%).
+
+## Editar textos
+
+Todo el contenido está en `index.html`. Busca la sección y edita el texto directamente.
+
+## Publicar (gratis)
+
+- **Netlify** o **Vercel**: arrastra la carpeta o conecta un repositorio.
+- **GitHub Pages**: sube los archivos a un repo y actívalo en Settings → Pages.
+- Apunta tu dominio `triodelaluz.cl` al hosting elegido.
+
+## Pendientes / decisiones
+
+- Enlaces de redes sociales (Instagram / Vimeo / YouTube) están como `#`. Reemplázalos cuando existan.
+- La frase institucional usada es "Historias con luz propia desde el sur del mundo".
+- Hay dos proyectos en desarrollo: **un documental en desarrollo** (documental) y
+  **Green Ghost: La Serie Animada**. Cada uno tiene su propia atmósfera de color.
+- Charlie Clark / Orale Films aparece en Equipo como "Productor asociado" y como creador del
+  universo de The Green Ghost. Si prefieres mantenerlo más institucional, edita esos bloques en `index.html`.

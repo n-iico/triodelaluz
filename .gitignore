@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Configuración local de Claude Code (no forma parte del sitio)
+.claude/
