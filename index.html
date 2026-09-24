@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trío de la Luz Productions — Cine, documental y animación desde Chile</title>
+  <meta name="description" content="Trío de la Luz Productions es una productora audiovisual chilena dedicada al cine, el documental, la animación y el contenido cultural con identidad latinoamericana. Desarrollamos Green Ghost: La Serie Animada y nuevos proyectos documentales." />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:title" content="Trío de la Luz Productions" />
+  <meta property="og:description" content="Cine, documental, animación y producción audiovisual desde Chile hacia el mundo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="Trío de la Luz Productions" />
+  <meta property="og:url" content="https://triodelaluzproductions.cl/" />
+  <meta property="og:image" content="https://triodelaluzproductions.cl/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cielo estrellado sobre el paisaje del sur de Chile" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://triodelaluzproductions.cl/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Trío de la Luz Productions",
+    "description": "Productora audiovisual chilena: cine, documental, animación y contenido cultural con identidad latinoamericana.",
+    "url": "https://triodelaluzproductions.cl/",
+    "logo": "https://triodelaluzproductions.cl/favicon.svg",
+    "email": "triodelaluz@gmail.com",
+    "areaServed": ["Chile", "Latinoamérica", "Estados Unidos"]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#0b0e12" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=20260922-1" />
+</head>
+<body>
+
+  <!-- ===== EMBLEMA: sprite reutilizable (tres fuerzas → una luz) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="emblem" viewBox="0 0 100 100">
+      <g fill="none" stroke-width="2.5" stroke-linecap="round">
+        <line x1="50" y1="22" x2="50" y2="50" stroke="#d1503f" stroke-opacity="0.85" />
+        <line x1="26" y1="64" x2="50" y2="50" stroke="#4a7fb5" stroke-opacity="0.85" />
+        <line x1="74" y1="64" x2="50" y2="50" stroke="#3f9b6e" stroke-opacity="0.85" />
+      </g>
+      <circle cx="50" cy="50" r="14" fill="#ffffff" opacity="0.10" />
+      <circle cx="50" cy="22" r="6" fill="#d1503f" />
+      <circle cx="26" cy="64" r="6" fill="#4a7fb5" />
+      <circle cx="74" cy="64" r="6" fill="#3f9b6e" />
+      <circle cx="50" cy="50" r="7" fill="#fdfaf2" />
+    </symbol>
+  </svg>
+
+  <!-- ===== LÍNEA DE LUZ: progreso de lectura (rojo → azul → verde → blanco) ===== -->
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__brand">
+        <svg class="emblem nav__emblem" aria-hidden="true"><use href="#emblem" /></svg>
+        Trío de la Luz <span class="nav__brand-sub">Productions</span>
+      </a>
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#proyecto">Proyectos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg"></div>
+    <div class="hero__vignette"></div>
+    <span class="hero__meteor" aria-hidden="true"></span>
+    <div class="hero__cursorlight" aria-hidden="true"></div>
+    <div class="hero__content">
+      <svg class="emblem-hero" viewBox="0 0 100 100" aria-label="Emblema Trío de la Luz" role="img">
+        <g fill="none" stroke-width="2.5" stroke-linecap="round">
+          <line class="hero-ray hero-ray--r" x1="50" y1="22" x2="50" y2="50" />
+          <line class="hero-ray hero-ray--b" x1="26" y1="64" x2="50" y2="50" />
+          <line class="hero-ray hero-ray--g" x1="74" y1="64" x2="50" y2="50" />
+        </g>
+        <circle class="hero-core-glow" cx="50" cy="50" r="16" />
+        <circle class="hero-dot hero-dot--r" cx="50" cy="22" r="6" />
+        <circle class="hero-dot hero-dot--b" cx="26" cy="64" r="6" />
+        <circle class="hero-dot hero-dot--g" cx="74" cy="64" r="6" />
+        <circle class="hero-core" cx="50" cy="50" r="7" />
+      </svg>
+      <h1 class="hero__wordmark">
+        <span class="hero__name">Trío de la Luz</span>
+        <span class="hero__productions">
+          <span class="hero__line" aria-hidden="true"></span>
+          <span class="hero__word">Productions</span>
+          <span class="hero__line" aria-hidden="true"></span>
+        </span>
+      </h1>
+      <p class="hero__lead">
+        Historias con luz propia desde el sur del mundo.
+      </p>
+      <p class="hero__sub">
+        Cine, documental, animación y producción audiovisual con identidad latinoamericana,
+        raíz ancestral y proyección internacional.
+      </p>
+      <div class="hero__actions">
+        <a href="#proyecto" class="btn btn--primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn--ghost">Contactar</a>
+      </div>
+    </div>
+    <a href="#nosotros" class="hero__scroll" aria-label="Bajar">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== FRASE ===== -->
+  <section class="quote reveal">
+    <span class="tridots" aria-hidden="true">
+      <span class="tridots__dot tridots__dot--r"></span>
+      <span class="tridots__dot tridots__dot--b"></span>
+      <span class="tridots__dot tridots__dot--g"></span>
+    </span>
+    <p>Tres fuerzas distintas que se unen para crear una luz mayor.</p>
+    <p class="quote__sub">Rojo, azul y verde — territorio, cielo y naturaleza — convergen en una luz blanca.</p>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section class="section" id="nosotros">
+    <div class="section__inner grid-2">
+      <div class="reveal reveal--left">
+        <p class="section__label">Quiénes somos</p>
+        <h2 class="section__title">Tres fuerzas, una luz.</h2>
+      </div>
+      <div class="prose reveal reveal--right">
+        <p>
+          Trío de la Luz Productions es una productora audiovisual chilena dedicada al desarrollo
+          de cine, documental, animación y contenidos con identidad latinoamericana y proyección
+          internacional.
+        </p>
+        <p>
+          Su nombre nace del universo de <em>The Green Ghost</em>, donde tres guerreros ancestrales
+          —rojo, azul y verde— unen sus poderes para crear una luz blanca: una fuerza mayor, común
+          y transformadora.
+        </p>
+        <p>
+          Esa simbología inspira nuestra forma de producir: reunir distintas miradas, talentos,
+          culturas y territorios para crear historias con alma, fuerza visual y sentido profundo.
+        </p>
+        <p>
+          Fundada por <strong>Charlie Clark</strong>, productor ejecutivo y principal impulsor de
+          la compañía, Trío de la Luz Productions cuenta con la dirección ejecutiva de
+          <strong>Rodrigo Fuenzalida</strong>, responsable de la operación diaria y la gestión de
+          proyectos en Chile y Latinoamérica.
+        </p>
+        <p>
+          Desde Chile, conectamos cine, naturaleza, raíz ancestral, misterio y proyección
+          internacional a través de proyectos como <em>Green Ghost: La Serie Animada</em> y un
+          documental actualmente en desarrollo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS EN DESARROLLO ===== -->
+  <section class="projects" id="proyecto">
+    <div class="projects__header section__inner reveal reveal--left">
+      <p class="section__label">Proyectos en desarrollo</p>
+      <h2 class="section__title">Dos universos en construcción.</h2>
+    </div>
+
+    <!-- Documental — título aún no revelado públicamente -->
+    <article class="project">
+      <div class="project__media project__media--doc">
+        <div class="project__media-bg"></div>
+        <div class="project__media-grade"></div>
+      </div>
+      <div class="project__panel reveal reveal--right">
+        <h3 class="featured__tag featured__tag--solo">Documental en desarrollo</h3>
+        <div class="prose prose--light">
+          <p>
+            Proyecto documental actualmente en desarrollo por Trío de la Luz Productions, con una
+            mirada cinematográfica conectada al territorio, el misterio y el sur de Chile.
+          </p>
+        </div>
+        <p class="project__credit">Con participación de Nicolás Ibieta en desarrollo creativo y producción.</p>
+        <p class="project__status"><span class="project__status-dot"></span>Estado: <strong>Desarrollo</strong></p>
+      </div>
+    </article>
+
+    <!-- Green Ghost: La Serie Animada -->
+    <article class="project project--reverse">
+      <div class="project__media project__media--ghost">
+        <div class="project__media-bg"></div>
+        <div class="project__media-grade"></div>
+      </div>
+      <div class="project__panel reveal reveal--left">
+        <p class="featured__tag">Serie animada en desarrollo</p>
+        <h3 class="featured__title">Green Ghost: La Serie Animada</h3>
+        <div class="prose prose--light">
+          <p>
+            Proyecto de animación actualmente en desarrollo, inspirado en el universo de
+            <em>The Green Ghost</em> y orientado a nuevas audiencias.
+          </p>
+        </div>
+        <p class="project__credit">Director y compositor: Claudio Rocco.</p>
+        <p class="project__status project__status--ghost"><span class="project__status-dot"></span>Estado: <strong>Desarrollo</strong></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===== QUÉ HACEMOS ===== -->
+  <section class="section" id="servicios">
+    <div class="section__inner">
+      <div class="reveal reveal--left">
+        <p class="section__label">Qué hacemos</p>
+        <h2 class="section__title">Producción audiovisual de principio a fin.</h2>
+      </div>
+      <div class="services">
+        <article class="service reveal">
+          <span class="service__num">01</span>
+          <h3>Cine y documental</h3>
+          <p>Desarrollo, investigación, rodaje y producción de películas y documentales con enfoque cinematográfico.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service__num">02</span>
+          <h3>Series y animación</h3>
+          <p>Desarrollo de conceptos, biblias creativas, pilotos, guiones y producción de contenido animado.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service__num">03</span>
+          <h3>Producción audiovisual en Chile</h3>
+          <p>Servicios de producción local para proyectos nacionales e internacionales.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service__num">04</span>
+          <h3>Contenido cultural y de marca</h3>
+          <p>Piezas audiovisuales para figuras públicas, campañas, medios, redes sociales y proyectos con identidad.</p>
+        </article>
+        <article class="service service--wide reveal">
+          <span class="service__num">05</span>
+          <h3>Desarrollo creativo</h3>
+          <p>Guion editorial, investigación narrativa, diseño de concepto, estrategia audiovisual y construcción de universos narrativos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NUESTRA MIRADA ===== -->
+  <section class="vision reveal">
+    <div class="vision__inner">
+      <p class="section__label section__label--light">Nuestra mirada</p>
+      <p class="vision__text">
+        Creemos en el poder de las historias que nacen del encuentro entre distintas fuerzas.
+      </p>
+      <p class="vision__body">
+        En Trío de la Luz Productions, la imagen, el territorio y la identidad son parte de un
+        mismo lenguaje. Nos interesan los relatos que cruzan cultura, naturaleza, misterio, humor
+        y memoria; historias capaces de conectar con el público desde la emoción, la curiosidad y
+        la experiencia visual.
+      </p>
+      <p class="vision__body">
+        Nuestra mirada combina lo ancestral y lo contemporáneo, lo latinoamericano y lo universal,
+        lo íntimo y lo cinematográfico. Desde el universo maya de <em>The Green Ghost</em> hasta
+        los paisajes del sur de Chile y la memoria mapuche, buscamos producir contenidos que no
+        solo se vean, sino que también se sientan.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== EQUIPO ===== -->
+  <section class="section" id="equipo">
+    <div class="section__inner">
+      <div class="reveal reveal--left">
+        <p class="section__label">Equipo</p>
+        <h2 class="section__title">La dirección de la compañía.</h2>
+      </div>
+      <div class="team">
+        <article class="team__card reveal reveal--left">
+          <h3 class="team__name">Charlie Clark</h3>
+          <p class="team__role">Fundador &amp; Productor Ejecutivo</p>
+          <p class="team__bio">
+            Empresario, productor y figura creativa con una trayectoria marcada por la conexión
+            entre Estados Unidos, México y Latinoamérica. Desde Trío de la Luz Productions
+            impulsa proyectos audiovisuales con identidad, alcance internacional y una mirada
+            cercana al público latino.
+          </p>
+        </article>
+        <article class="team__card reveal reveal--right">
+          <h3 class="team__name">Rodrigo Fuenzalida</h3>
+          <p class="team__role">Director Ejecutivo</p>
+          <p class="team__bio">
+            Responsable de la gestión operativa y ejecutiva de la productora. Coordina el
+            desarrollo de proyectos, las relaciones de producción y la ejecución de iniciativas
+            audiovisuales en Chile y Latinoamérica.
+          </p>
+        </article>
+      </div>
+
+      <div class="collaborators reveal">
+        <p class="section__label">Colaboradores creativos</p>
+        <p class="prose">
+          Trío de la Luz Productions trabaja con equipos asociados según la naturaleza de cada
+          proyecto, convocando directores, guionistas, productores, investigadores y especialistas
+          creativos. En los proyectos actualmente en desarrollo, <strong>Nicolás Ibieta</strong>
+          participa en áreas de desarrollo creativo, producción y construcción narrativa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEPARADOR ===== -->
+  <div class="separator reveal" aria-hidden="true">
+    <span class="separator__line"></span>
+    <svg class="emblem separator__emblem"><use href="#emblem" /></svg>
+    <span class="separator__line"></span>
+  </div>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="contact" id="contacto">
+    <div class="contact__inner reveal">
+      <p class="section__label section__label--light">Contacto</p>
+      <h2 class="contact__title">¿Quieres conocer más sobre nuestros proyectos o trabajar con nosotros?</h2>
+      <p class="contact__lead">Para proyectos, colaboraciones o consultas de producción:</p>
+      <a href="mailto:triodelaluz@gmail.com" class="contact__email">triodelaluz@gmail.com</a>
+      <p class="contact__meta">Trío de la Luz Productions</p>
+      <p class="contact__meta contact__meta--dim">Chile · Latinoamérica · Estados Unidos</p>
+      <div class="contact__actions">
+        <a href="mailto:triodelaluz@gmail.com" class="btn btn--primary">Escríbenos</a>
+      </div>
+      <!-- Redes sociales: ocultas hasta que existan las cuentas.
+           Para reactivarlas, descomenta este bloque y reemplaza los href="#".
+      <div class="contact__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <span>·</span>
+        <a href="#" aria-label="Vimeo">Vimeo</a>
+        <span>·</span>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__brand"><svg class="emblem footer__emblem" aria-hidden="true"><use href="#emblem" /></svg> Trío de la Luz Productions</span>
+      <span class="footer__tagline">Historias con luz propia desde el sur del mundo.</span>
+      <span class="footer__copy">© <span id="year"></span> Trío de la Luz Productions · Chile</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
